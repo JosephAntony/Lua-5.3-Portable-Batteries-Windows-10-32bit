@@ -1,5 +1,5 @@
-# Lua-5.3-with-Batteries-Windows-10-32bit  
-Binary distribution of Lua 5.3.3 with Batteries compiled using Mingw32 on Windows 10. NO additional software, libraries or runtimes are required.  
+# Lua-5.3-Portable-Batteries-Windows-10-32bit  
+This is portable binary distribution of Lua 5.3.3 with batteries included compiled using Mingw32 on Windows 10. NO additional software, libraries or runtimes are required.  
 
 **Start your adventure with Lua! What's included:**  
 
