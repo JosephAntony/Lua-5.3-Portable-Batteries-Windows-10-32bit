@@ -16,4 +16,4 @@ md5 1.2-1
 microlight 1.0-1  
 penlight 1.3.2-2  
 
-Unzip it anywhere and run test.bat. Your feedback is strongly appreciated.
+Unzip it anywhere and run test.bat. Your feedback is highly appreciated.
