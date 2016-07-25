@@ -1,7 +1,7 @@
 # Lua-5.3-with-Batteries-Windows-10-32bit  
 Binary distribution of Lua 5.3.3 with Batteries compiled using Mingw32 on Windows 10. NO additional software, libraries or runtimes are required.  
 
-*Start your adventure with Lua! What's included:*  
+**Start your adventure with Lua! What's included:**  
     
 lpeg 1.0.0-1  
 lrexlib-pcre 2.8.0-1  
