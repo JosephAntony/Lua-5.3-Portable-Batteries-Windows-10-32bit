@@ -8,14 +8,16 @@ July 26, 2016
 
 In this humble step-by-step manual we will learn how to compile and install Lua, Lua C modules and one pure Lua module. We will learn what to download, install and setup to achieve this.  
 
-At the end of this steps you will have standalone Lua distribution for Windows which:
+At the end of this steps you will have standalone Lua distribution for Windows which: 
 	- runs on any Windows 32/64 bit
 	- doesn't need any additional libraries or runtimes to install to run correctly
 	- you can distribute it to your friends, collegues or clients with your scripts as a zip archive
 	- you can take it with you on USB key
 
 ---
+
 For this manual everything will be in c:\work folder, please create it.
+
 ---
 
 1. Installing MinGW32 suite with C/C++ compiler
