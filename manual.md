@@ -8,6 +8,7 @@ July 26, 2016
 
 In this humble step-by-step manual we will learn how to compile and install Lua, Lua C modules and one pure Lua module. We will learn what to download, install and setup to achieve this.  
 
+---
 
 At the end of this steps you will have standalone Lua distribution for Windows which:
   - runs on Windows 7, 8, 8.1, 10 ... 32/64 bit  (if you can run it on XP let me know :)
@@ -15,8 +16,11 @@ At the end of this steps you will have standalone Lua distribution for Windows w
   - you can distribute it to your friends, collegues or clients with your scripts as a zip archive  
   - you can take it with you on USB key  
 
+---
 
 For this manual everything will be in **c:\work** folder, please create it.
+
+---
 
 
 1. Installing MinGW32 suite with C/C++ compiler
@@ -129,7 +133,7 @@ For this manual everything will be in **c:\work** folder, please create it.
 	- test it for yourself 
 	- ... and enjoy the Lua programming :)
 
-- **Some principles as far as I understand them)**
+**Some principles as far as I understand them)**
   - if module is written in pure Lua it goes to your LUA_PATH, in our case into ```C:\work\lua\share\lua\5.3``` folder
   - if module is written in C and **has no** external (DLL/header files) dependencies resulting DLLs goes in LUA_CPATH in our case into ```C:\work\lua\lib\lua\5.3``` folder ... eg. luautf8 module
   - if module is written in C and **has** external third party dependencies resulting DLL(s) goes in LUA_CPATH in our case into ```C:\work\lua\lib\lua\5.3``` folder and DLL(s) from third party which were linked to create resulting Lua DLL(s) goes into ```c:\work\lua\bin``` directory in our case ... eg. lsqlite3 module. 
