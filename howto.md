@@ -129,3 +129,11 @@ For this manual everything will be in **c:\work** folder, please create it.
 	- now you have your own distribution of Lua with some very usefull C modules, everything in ```c:\work\lua folder```
 	- test it for yourself 
 	- ... and enjoy the Lua programming :)
+
+**Some principles as far as I understand them (I'm not proficient C programmer)**
+	- if module is written in pure Lua it goes to your LUA_PATH, in our case into ```C:\work\lua\share\lua\5.3``` folder
+	- if module is written in C and **has no** external (DLL/header files) dependencies resulting DLLs goes in our case into ```C:\work\lua\lib\lua\5.3``` folder ... eg. luautf8 module
+	- if module is written in C and **has** external third party dependencies resulting DLL(s) goes in our case into ```C:\work\lua\lib\lua\5.3``` folder and DLL(s) from third party which were linked to create resulting Lua DLL(s) goes into ```c:\work\lua\bin``` directory in our case ... eg. lsqlite3 module. If you install lsqlite3 module and look at the output you can see third row from bellow:
+	```
+	mingw32-gcc -shared -o lsqlite3.dll lsqlite3.o -Lc:\work\src\sqlite\ -lsqlite3 c:/work/lua/bin/lua53.dll -lm
+	```
