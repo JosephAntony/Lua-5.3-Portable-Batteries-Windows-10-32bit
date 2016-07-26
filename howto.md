@@ -16,7 +16,7 @@ At the end of this steps you will have standalone Lua distribution for Windows w
 
 ---
 
-For this manual everything will be in c:\work folder, please create it.
+For this manual everything will be in **c:\work** folder, please create it.
 
 ---
 
