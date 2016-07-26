@@ -1,11 +1,22 @@
 ** WORK IN PROGRESS **
 
-
 Installing Lua 5.3.3 and C modules from sources on Windows
 -------------------------------
 July 26, 2016
 
-For this manual everything will be in c:\work folder, create it.
+---
+
+In this humble step-by-step manual we will learn how to compile and install Lua, Lua C modules and one pure Lua module. We will learn what to download, install and setup to achieve this.  
+
+At the end of this steps you will have standalone Lua distribution for Windows which:
+	- runs on any Windows 32/64 bit
+	- doesn't need any additional libraries or runtimes to install to run correctly
+	- you can distribute it to your friends, collegues or clients with your scripts as a zip archive
+	- you can take it with you on USB key
+
+---
+For this manual everything will be in c:\work folder, please create it.
+---
 
 1. Installing MinGW32 suite with C/C++ compiler
 	- download MinGW32 from here https://sourceforge.net/projects/mingw/files/Installer/
@@ -69,47 +80,50 @@ For this manual everything will be in c:\work folder, create it.
 	- run command ```luarocks install lua-utf8``` in cmd window ... Zzzz ...
 	- ... and module is installed in systree
 	
-6. Installing "luasec" module into systree
-	- luasocket module will be installed automatically with luasec module, don't bother
-	- first install OpenSSL binary package from here https://slproweb.com/products/Win32OpenSSL.html to avoid compilation of sources, btw. it works with msys.
-	- download full version, not light version, 32bit, I use this now "Win32 OpenSSL v1.0.1t"
-	- run installer, install it anywhere (I use default "C:\OpenSSL-Win32"), if installer asks where to copy OpenSSL DLLs choose "The OpenSSL binaries(/bin) directory"
+6. Installing *luasec* C module into systree
+	- luasocket module will be installed automatically with luasec module
+	- first install OpenSSL binary package from here https://slproweb.com/products/Win32OpenSSL.html to avoid compilation of sources, btw. it works with msys so if you wish you can compile it from sources
+	- download full version, not *light* version, 32bit, I use this now *Win32 OpenSSL v1.0.1t*
+	- run installer, install it anywhere (I use default ```C:\OpenSSL-Win32```), if installer asks where to copy OpenSSL DLLs choose ```The OpenSSL binaries(/bin) directory```
 	- donate author if you wish and finish installation
-	- in cmd window run the following command "luarocks install luasec OPENSSL_DIR=c:\OpenSSL-Win32 OPENSSL_LIBDIR=c:\OpenSSL-Win32\lib OPENSSL_INCDIR=c:\OpenSSL-Win32\include"
-	- use your path in command, path where you installed openssl
+	- in cmd window run the following command ```luarocks install luasec OPENSSL_DIR=c:\OpenSSL-Win32 OPENSSL_LIBDIR=c:\OpenSSL-Win32\lib OPENSSL_INCDIR=c:\OpenSSL-Win32\include```
+	- use your path in command above, path where you installed openssl
 	- luasec and luasocket are now installed in systree
-	- for our standalone distro navigate to "c:\OpenSSL-Win32" and copy libeay32.dll, libssl32.dll, ssleay32.dll into "c:\work\lua\bin" folder
-	- also copy "msvcr120.dll" from "c:\OpenSSL-Win32\bin" into c:\work\lua\bin
+	- for our standalone distro navigate to ```c:\OpenSSL-Win32``` and copy ```libeay32.dll, libssl32.dll, ssleay32.dll``` into ```c:\work\lua\bin``` folder
+	- also copy ```msvcr120.dll``` from ```c:\OpenSSL-Win32\bin``` into ```c:\work\lua\bin```
 	
-7.	Installing "luasql-mysql" module into systree
+7.	Installing *luasql-mysql* C module into systree
 	- download MySQL Connector/C 32bit from here https://dev.mysql.com/downloads/connector/c/
-	- run the installer, I installed it into "c:\work\src\connector"
-	- now we need to edit module rockspec file because to this time there is error which library to link with Lua
-	- download rockspec file here "https://luarocks.org/modules/tomasguisasola/luasql-mysql/cvs-1"
-	- right click on "rockspec" link and choose "Save link as" and store it in "c:\work\src" folder
+	- run the installer, I installed it into ```c:\work\src\connector```
+	- now we need to edit module rockspec file because to this time there is error which library to link to create Lua module
+	- download rockspec file here https://luarocks.org/modules/tomasguisasola/luasql-mysql/cvs-1
+	- right click on ```rockspec`` link and choose ```Save link as``` and store it in ```c:\work\src``` folder
 	- edit file with editor which can handle unix line-endings, say notepad++
-	- on line 29 replace libraries = { "mysqlclient" }, with libraries = { "libmysql" },
-	- in cmd window run "luarocks install c:\work\src\luasql-mysql-cvs-1.rockspec MYSQL_DIR=c:\work\src\connector MYSQL_INCDIR=c:\work\src\connector\include MYSQL_LIBDIR=c:\work\src\connector\lib"
-	- copy file "libmysql.dll" from "C:\work\src\connector\lib" into "C:\work\lua\bin"
-	- done luasql-mysql module is installed in systree
+	- on line 29 replace ```libraries = { "mysqlclient" }```, with ```libraries = { "libmysql" }```,
+	- in cmd window run ```luarocks install c:\work\src\luasql-mysql-cvs-1.rockspec MYSQL_DIR=c:\work\src\connector MYSQL_INCDIR=c:\work\src\connector\include MYSQL_LIBDIR=c:\work\src\connector\lib```
+	- copy file ```libmysql.dll``` from ```C:\work\src\connector\lib``` into ```C:\work\lua\bin```
+	- luasql-mysql module is installed in systree
 	
 	
-8. Installing "lsqlite3" module into systree
-	- download rock file directly from http://lua.sqlite.org/index.cgi/index version 0.9.3 and unpack it into "c:\work\src"
-	- download sqlite source http://sqlite.org/2016/sqlite-amalgamation-3130000.zip and unpack it into "c:\work\src\sqlite"
-	- download sqlite precompiled library http://sqlite.org/2016/sqlite-dll-win32-x86-3130000.zip and unpack it also into "c:\work\src\sqlite"
-	- open cmd window and run the following command "luarocks install c:\work\src\lsqlite3_fsl09w\lsqlite3-0.9.3-0.rockspec SQLITE_DIR=c:\work\src\sqlite SQLITE_INCDIR=c:\work\src\sqlite SQLITE_LIBDIR=c:\work\src\sqlite"
-	- copy sqlite3.dll file from c:\work\src\sqlite into c:\work\lua\bin
-	- done lsqlite3 module is installed
+8. Installing *lsqlite3* C module into systree
+	- download rock file directly from SQLite http://lua.sqlite.org/index.cgi/index version 0.9.3 and unpack it into ```c:\work\src```
+	- download sqlite source http://sqlite.org/2016/sqlite-amalgamation-3130000.zip and unpack it into ```c:\work\src\sqlite```
+	- download sqlite precompiled library http://sqlite.org/2016/sqlite-dll-win32-x86-3130000.zip and unpack it also into ```c:\work\src\sqlite```
+	- open cmd window and run the following command ```luarocks install c:\work\src\lsqlite3_fsl09w\lsqlite3-0.9.3-0.rockspec SQLITE_DIR=c:\work\src\sqlite SQLITE_INCDIR=c:\work\src\sqlite SQLITE_LIBDIR=c:\work\src\sqlite```
+	- copy ```sqlite3.dll``` file from ```c:\work\src\sqlite``` into ```c:\work\lua\bin```
+	- lsqlite3 module is installed in systree
 	
-9. Installing "penlight" module
-	- this is pure lua module, it is ideal resource on how to write code in lua, is well documented, full of examples
-	- open cmd window and run the following command "luarocks install penlight"
-	- it is dependent on module luafilesystem which installs automaticaly
-	- done penlight module is installed
+9. Installing *penlight* pure Lua module
+	- this is a bonus :) pure lua module, it is ideal resource on how to write code in lua, is well documented, full of examples
+	- open cmd window and run the following command ```luarocks install penlight```
+	- it is dependent on module *luafilesystem* which installs automaticaly don't worry
+	- penlight module is installed in systree
 	
 10. Final steps
-	- copy Lua binary modules from C:\work\luarocks\systree\lib\lua\5.3 folder into C:\work\lua\lib\lua\5.3
-	- copy Lua modules from C:\work\luarocks\systree\share\lua\5.3 folder into C:\work\lua\share\lua\5.3
-	- now you have your own distribution of Lua with some very usefull C modules, everything in c:\work\lua folder
-	- test it for yourself and enjoy Lua programming :)
+	- copy Lua binary modules from ```C:\work\luarocks\systree\lib\lua\5.3``` folder into ```C:\work\lua\lib\lua\5.3```
+	- copy Lua modules from ```C:\work\luarocks\systree\share\lua\5.3``` folder into ```C:\work\lua\share\lua\5.3```
+	- for your standalone distribution don't forget repeat previous two steps everytime you install/remove module into/from Luarocks systree .. make a batch file to automate it :)
+	- of course you can add your Luarocks' systree subfolders into your ```LUA_PATH``` and ```LUA_CPATH``` variables but I don't do/need this
+	- now you have your own distribution of Lua with some very usefull C modules, everything in ```c:\work\lua folder```
+	- test it for yourself 
+	- ... and enjoy the Lua programming :)
