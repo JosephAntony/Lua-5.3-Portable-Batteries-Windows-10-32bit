@@ -12,7 +12,7 @@ In this humble step-by-step manual we will learn how to compile and install Lua,
 
 At the end of this steps you will have standalone Lua distribution for Windows which:
   - runs on Windows 7, 8, 8.1, 10 ... 32/64 bit  (if you can run it on XP let me know :)
-  - doesn't need any additional libraries or runtimes to install to run correctly    
+  - doesn't require from its user to install any additional libraries, runtimes, frameworks into his operating system to run correctly    
   - you can distribute it to your friends, collegues or clients with your scripts as a zip archive  
   - you can take it with you on USB key  
 
