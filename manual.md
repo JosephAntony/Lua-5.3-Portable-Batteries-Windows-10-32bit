@@ -133,8 +133,9 @@ For this manual everything will be in **c:\work** folder, please create it.
   - if module is written in pure Lua it goes to your LUA_PATH, in our case into ```C:\work\lua\share\lua\5.3``` folder
   - if module is written in C and **has no** external (DLL/header files) dependencies resulting DLLs goes in LUA_CPATH in our case into ```C:\work\lua\lib\lua\5.3``` folder ... eg. luautf8 module
   - if module is written in C and **has** external third party dependencies resulting DLL(s) goes in LUA_CPATH in our case into ```C:\work\lua\lib\lua\5.3``` folder and DLL(s) from third party which were linked to create resulting Lua DLL(s) goes into ```c:\work\lua\bin``` directory in our case ... eg. lsqlite3 module. 
+  - in case of OpenSSL third party DLLs ```libeay32.dll, libssl32.dll, ssleay32.dll``` were linked also with msvcr120.dll (Visual C++ redistributable library I think) so this file must also go into Lua's \bin folder.
   
-If you install lsqlite3 module and look at the output you can see on third line from bellow the following:
+If you install lsqlite3 module and look at the output from Luarocks in cmd windows you can see on third line from bellow the following:
 ```
 mingw32-gcc -shared -o **lsqlite3.dll** lsqlite3.o -Lc:\work\src\sqlite\ **-lsqlite3** c:/work/lua/bin/lua53.dll -lm
 ```
