@@ -67,7 +67,7 @@ For this manual everything will be in c:\work folder, create it.
 	- luarocks install lua-utf8
 	- done, module is installed in systree
 	
-6.	Installing "luasec" module into systree
+6. Installing "luasec" module into systree
 	- luasocket module will be installed automatically with luasec module, don't bother
 	- first install OpenSSL binary package from here https://slproweb.com/products/Win32OpenSSL.html to avoid compilation of sources, btw. it works with msys.
 	- download full version, not light version, 32bit, I use this now "Win32 OpenSSL v1.0.1t"
@@ -92,5 +92,22 @@ For this manual everything will be in c:\work folder, create it.
 	- done luasql-mysql module is installed in systree
 	
 	
+8. Installing "lsqlite3" module into systree
+	- download rock file directly from http://lua.sqlite.org/index.cgi/index version 0.9.3 and unpack it into "c:\work\src"
+	- download sqlite source http://sqlite.org/2016/sqlite-amalgamation-3130000.zip and unpack it into "c:\work\src\sqlite"
+	- download sqlite precompiled library http://sqlite.org/2016/sqlite-dll-win32-x86-3130000.zip and unpack it also into "c:\work\src\sqlite"
+	- open cmd window and run the following command "luarocks install c:\work\src\lsqlite3_fsl09w\lsqlite3-0.9.3-0.rockspec SQLITE_DIR=c:\work\src\sqlite SQLITE_INCDIR=c:\work\src\sqlite SQLITE_LIBDIR=c:\work\src\sqlite"
+	- copy sqlite3.dll file from c:\work\src\sqlite into c:\work\lua\bin
+	- done lsqlite3 module is installed
 	
+9. Installing "penlight" module
+	- this is pure lua module, it is ideal resource on how to write code in lua, is well documented, full of examples
+	- open cmd window and run the following command "luarocks install penlight"
+	- it is dependent on module luafilesystem which installs automaticaly
+	- done penlight module is installed
 	
+10. Final steps
+	- copy Lua binary modules from C:\work\luarocks\systree\lib\lua\5.3 folder into C:\work\lua\lib\lua\5.3
+	- copy Lua modules from C:\work\luarocks\systree\share\lua\5.3 folder into C:\work\lua\share\lua\5.3
+	- now you have your own distribution of Lua with some very usefull C modules, everything in c:\work\lua folder
+	- test it for yourself and enjoy Lua programming :)
