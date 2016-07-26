@@ -1,8 +1,9 @@
 ** WORK IN PROGRESS **
 
 
-Lua windows plus C/non-C modules standalone help
+Installing Lua 5.3.3 and C modules from sources on Windows
 -------------------------------
+July 26, 2016
 
 For this manual everything will be in c:\work folder, create it.
 
@@ -19,19 +20,19 @@ For this manual everything will be in c:\work folder, create it.
 		- mingw32-gcc-g++
 		- msys-base
 	- in window menu click on *Installation* -> *Apply changes*
-	- new window opens, click "Apply", installation process begins
-	- after end click "Close" and close also MinGW32 window.
-	- navigate to C:\work\mingw\msys\1.0 and make shortcut from msys.bat file on the desktop we will use Msys for compilation
-	- add C:\work\mingw\bin to your PATH variable if it is not there
+	- new window opens, click *Apply*, installation process begins
+	- after end click *Close* and close also MinGW32 window.
+	- navigate to ```C:\work\mingw\msys\1.0``` and make shortcut from ```msys.bat``` file on the desktop we will use Msys for compilation
+	- add ```C:\work\mingw\bin``` to your ```PATH``` variable if it is not there
 
 2. Installing Git for Windows
-	- download Git installation file from here https://git-scm.com/download/win
-	- run it, click next, change directory to c:\work\git
-	- click "Next" 3 times
-	- check Use Git from the Windows Command Prompt, click "Next"
-	- check Checkout Windows-style, ... click "Next"
-	- check Use Windows' default console window, click "Next"
-	- click "Install", drink coffee, blame Lua :)
+	- download Git installation file from here ```https://git-scm.com/download/win```
+	- run it, click *Next*, change directory to ```c:\work\git```
+	- click *Next* 3 times
+	- check *Use Git from the Windows Command Prompt*, click *Next*
+	- check *Checkout Windows-style, ...* click *Next*
+	- check *Use Windows' default console window*, click *Next*
+	- click *Install*, drink coffee
 	- Finish it
 	
 3. Compiling and installing Lua
