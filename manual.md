@@ -1,4 +1,4 @@
-** WORK IN PROGRESS **
+** DRAFT **
 
 Installing Lua 5.3.3 and C modules from sources on Windows
 -------------------------------
@@ -9,11 +9,11 @@ July 26, 2016
 In this humble step-by-step manual we will learn how to compile and install Lua, Lua C modules and one pure Lua module. We will learn what to download, install and setup to achieve this.  
 
 
-At the end of this steps you will have standalone Lua distribution for Windows which:  
-	- runs on any Windows 32/64 bit  
-	- doesn't need any additional libraries or runtimes to install to run correctly    
-	- you can distribute it to your friends, collegues or clients with your scripts as a zip archive  
-	- you can take it with you on USB key  
+At the end of this steps you will have standalone Lua distribution for Windows which:
+  - runs on Windows 7, 8, 8.1, 10 ... 32/64 bit  (if you can run it on XP let me know :)
+  - doesn't need any additional libraries or runtimes to install to run correctly    
+  - you can distribute it to your friends, collegues or clients with your scripts as a zip archive  
+  - you can take it with you on USB key  
 
 
 For this manual everything will be in **c:\work** folder, please create it.
@@ -135,7 +135,7 @@ For this manual everything will be in **c:\work** folder, please create it.
   - if module is written in C and **has** external third party dependencies resulting DLL(s) goes in LUA_CPATH in our case into ```C:\work\lua\lib\lua\5.3``` folder and DLL(s) from third party which were linked to create resulting Lua DLL(s) goes into ```c:\work\lua\bin``` directory in our case ... eg. lsqlite3 module. 
   - in case of OpenSSL third party DLLs ```libeay32.dll, libssl32.dll, ssleay32.dll``` were linked also with msvcr120.dll (Visual C++ redistributable library I think) so this file must also go into Lua's \bin folder.
   
-If you install lsqlite3 module and look at the output from Luarocks in cmd windows you can see on third line from bellow the following:
+If you install lsqlite3 module and look at the output from Luarocks in cmd window you can see on third line from bellow the following:
 ```
 mingw32-gcc -shared -o **lsqlite3.dll** lsqlite3.o -Lc:\work\src\sqlite\ **-lsqlite3** c:/work/lua/bin/lua53.dll -lm
 ```
