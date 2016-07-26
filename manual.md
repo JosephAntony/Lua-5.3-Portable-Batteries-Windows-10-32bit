@@ -132,16 +132,18 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- now you have your own distribution of Lua with some very usefull C modules, everything in ```c:\work\lua``` folder
 	- test it for yourself 
 	- ... and enjoy the Lua programming :)
+	
+---
 
 **Some principles as far as I understand them**
   - if module is written in pure Lua it goes to your LUA_PATH, in our case into ```C:\work\lua\share\lua\5.3``` folder
   - if module is written in C and **has no** external (DLL/header files) dependencies resulting DLLs goes in LUA_CPATH in our case into ```C:\work\lua\lib\lua\5.3``` folder ... eg. luautf8 module installation.
   - if module is written in C and **has** external third party dependencies resulting DLL(s) goes in LUA_CPATH in our case into ```C:\work\lua\lib\lua\5.3``` folder and DLL(s) from third party which were linked to create resulting Lua DLL(s) goes into ```c:\work\lua\bin``` directory in our case ... eg. lsqlite3 module installation. 
   - in case of OpenSSL, third party DLLs ```libeay32.dll, libssl32.dll, ssleay32.dll``` were linked also with msvcr120.dll (Visual C++ redistributable library I think) so this file must also go into Lua's \bin folder.
-  - If you install lsqlite3 module and look at the output from Luarocks in cmd window you can see on third line from bellow the following:
+  - If you install lsqlite3 module and look at the output from Luarocks (C linker) in cmd window you can see on third line from bellow the following:
 ```
-mingw32-gcc -shared -o **lsqlite3.dll** lsqlite3.o -Lc:\work\src\sqlite\ **-lsqlite3** c:/work/lua/bin/lua53.dll -lm
+mingw32-gcc -shared -o lsqlite3.dll lsqlite3.o -Lc:\work\src\sqlite\ -lsqlite3 c:/work/lua/bin/lua53.dll -lm
 ```
-  - lsqlite3.dll is resulting Lua binary module which goes to Lua cpath
+  - lsqlite3.dll is resulting Lua binary module which goes to LUA_CPATH
   - -lsqlite3 means sqlite3.dll (-l is linker switch) from sqlite distribution which we downloaded precompiled and goes to Lua's \bin folder
-  - it is similar in other cases
+  - in case of other modules it is similar, you can deduct what to copy into Lua's bin folder from C linker output.
