@@ -7,18 +7,18 @@ Lua windows plus C/non-C modules standalone help
 For this manual everything will be in c:\work folder, create it.
 
 1. Installing MinGW32 suite with C/C++ compiler
-	- download MinGW32 from here https://sourceforge.net/projects/mingw/files/Installer/
+	- download MinGW32 from here ```https://sourceforge.net/projects/mingw/files/Installer/```
 		- file name is mingw-get-setup.exe
 	- run it, click install
-	- change installation directory to c:\work\mingw
-	- click "Continue"
-	- at the end of the process click "Continue" again, new window opens where you can choose what to install
+	- change installation directory to ```c:\work\mingw```
+	- click ```Continue```
+	- at the end of the process click ```Continue``` again, new window opens where you can choose what to install
 	- mark the following for installation
 		- mingw-developer-toolkit
 		- mingw32-base
 		- mingw32-gcc-g++
 		- msys-base
-	- in window menu click on "Installation" -> "Apply changes"
+	- in window menu click on *Installation* -> *Apply changes*
 	- new window opens, click "Apply", installation process begins
 	- after end click "Close" and close also MinGW32 window.
 	- navigate to C:\work\mingw\msys\1.0 and make shortcut from msys.bat file on the desktop we will use Msys for compilation
