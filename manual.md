@@ -130,7 +130,8 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- for your standalone distribution don't forget repeat previous two steps everytime you install/remove module into/from Luarocks systree .. make a batch file to automate it :)
 	- of course you can add your Luarocks' systree subfolders into your ```LUA_PATH``` and ```LUA_CPATH``` variables but I don't do/need this
 	- now you have your own distribution of Lua with some very usefull C modules, everything in ```c:\work\lua``` folder
-	- test it for yourself 
+	- test it for yourself, start lua interpreter in cmd window and try to load module to view its members
+	- ```local u = require('lua-utf8') for k, v in pairs(u) do print(k,v) end```
 	- ... and enjoy the Lua programming :)
 	
 ---
