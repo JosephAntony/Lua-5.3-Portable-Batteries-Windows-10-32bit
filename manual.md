@@ -23,7 +23,7 @@ In this manual everything goes into **c:\work** folder, so please create it.
 ---
 
 
-1. Installing MinGW32 C/C++ compiler
+**1. Installing MinGW32 C/C++ compiler**
 	- download MinGW32 from here https://sourceforge.net/projects/mingw/files/Installer/
 		- file name is ```mingw-get-setup.exe```
 	- run it, then click ```Install```
@@ -41,7 +41,7 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- navigate to ```C:\work\mingw\msys\1.0``` folder and make shortcut from ```msys.bat``` file on the desktop, we will use Msys for compilation
 	- add ```C:\work\mingw\bin``` folder to your ```PATH``` variable if it is not there
 
-2. Installing Git for Windows
+**2. Installing Git for Windows**
 	- download Git installation file from here https://git-scm.com/download/win
 	- run it, click *Next*, change directory to ```c:\work\git```
 	- click *Next* 3 times
@@ -51,7 +51,7 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- click *Install*, drink coffee
 	- finish it
 	
-3. Compiling and installing Lua
+**3. Compiling and installing Lua**
 	- download latest lua (5.3.3 currently) from here https://www.lua.org/ftp/lua-5.3.3.tar.gz
 	- create folder ```c:\work\src```
 	- unpack it to ```c:\work\src``` ... it is tar.gz archive you will need something like http://www.7-zip.org/download.html to unpack it
@@ -67,7 +67,7 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- add ```C:\work\lua\bin``` to your ```PATH``` variable if you wish and if it is not there
 	- **congrats you compiled your very own Lua from sources**
 	
-4. Installing Luarocks
+**4. Installing Luarocks**
 	- here are original install instructions https://github.com/keplerproject/luarocks/wiki/Installation-instructions-for-Windows
 	- download latest Luarocks (2.3.0) from here http://keplerproject.github.io/luarocks/releases/
 	- unpack downloaded zip file in ```c:\work\src``` folder
@@ -81,11 +81,11 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- Luarocks is installed
 	- close all black cmd windows and run new one to reload ```PATH``` settings :)
 	
-5. Installing first Lua C module *luautf8* into systree
+**5. Installing first Lua C module *luautf8* into systree**
 	- run command ```luarocks install lua-utf8``` in cmd window ... Zzzz ...
 	- ... and module is installed in systree
 	
-6. Installing *luasec* C module into systree
+**6. Installing *luasec* C module into systree**
 	- luasocket module will be installed automatically with luasec module
 	- first install OpenSSL binary package from here https://slproweb.com/products/Win32OpenSSL.html to avoid compilation of sources, btw. it works with msys so if you wish you can compile it from sources
 	- download full version, not *light* version, 32bit, I use this now *Win32 OpenSSL v1.0.1t*
@@ -97,7 +97,7 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- for our standalone distro navigate to ```c:\OpenSSL-Win32``` folder and copy ```libeay32.dll, libssl32.dll, ssleay32.dll``` files into ```c:\work\lua\bin``` folder
 	- also copy ```msvcr120.dll``` file from ```c:\OpenSSL-Win32\bin``` folder into ```c:\work\lua\bin``` folder
 	
-7.	Installing *luasql-mysql* C module into systree
+**7. Installing *luasql-mysql* C module into systree**
 	- download MySQL Connector/C 32bit from here https://dev.mysql.com/downloads/connector/c/
 	- run the installer, I installed it into ```c:\work\src\connector```
 	- now we need to edit module rockspec file because to this time there is error which library to link to create Lua module on Windows
@@ -110,7 +110,7 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- luasql-mysql module is installed in systree
 	
 	
-8. Installing *lsqlite3* C module into systree
+**8. Installing *lsqlite3* C module into systree**
 	- download rock file directly from SQLite http://lua.sqlite.org/index.cgi/index version 0.9.3 and unpack it into ```c:\work\src``` folder
 	- download sqlite source http://sqlite.org/2016/sqlite-amalgamation-3130000.zip and unpack it into ```c:\work\src\sqlite``` folder
 	- download sqlite precompiled library http://sqlite.org/2016/sqlite-dll-win32-x86-3130000.zip and unpack it also into ```c:\work\src\sqlite``` folder
@@ -118,13 +118,13 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- copy ```sqlite3.dll``` file from ```c:\work\src\sqlite``` folder into ```c:\work\lua\bin``` folder
 	- lsqlite3 module is installed in systree
 	
-9. Installing *penlight* pure Lua module
+**9. Installing *penlight* pure Lua module**
 	- this is a bonus :) pure lua module, it is ideal resource on how to write code in lua, is well documented, full of examples
 	- open cmd window and run the following command ```luarocks install penlight```
 	- it is dependent on module *luafilesystem* which installs automaticaly don't worry
 	- penlight module is installed in systree
 	
-10. Final steps
+**10. Final steps**
 	- copy Lua binary modules from ```C:\work\luarocks\systree\lib\lua\5.3``` folder into ```C:\work\lua\lib\lua\5.3``` folder
 	- copy Lua modules from ```C:\work\luarocks\systree\share\lua\5.3``` folder into ```C:\work\lua\share\lua\5.3``` folder
 	- for your standalone distribution don't forget repeat previous two steps everytime you install/remove module into/from Luarocks systree .. make a batch file to automate it :)
