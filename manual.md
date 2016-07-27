@@ -19,10 +19,13 @@ At the end of the following steps you will have standalone Lua distribution for 
 In this manual everything what we will install goes into **c:\work** folder, so please create it.
 
 ---
-[Installing MinGW32 C/C++ compiler](#1)
-[Installing Git for Windows](#2)
-[Compiling and installing Lua](#3)
-[Installing Luarocks](#4)
+
+Contents:  
+
+* [Installing MinGW32 C/C++ compiler](#1)
+* [Installing Git for Windows](#2)
+* [Compiling and installing Lua](#3)
+* [Installing Luarocks](#4)
 [](#4)
 [](#5)
 [](#6)
@@ -31,6 +34,8 @@ In this manual everything what we will install goes into **c:\work** folder, so 
 [](#9)
 [](#10)
 [](#11)
+
+---
 
 <a name="1"></a>
 **1. Installing MinGW32 C/C++ compiler**
