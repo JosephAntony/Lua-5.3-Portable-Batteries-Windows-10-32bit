@@ -139,10 +139,9 @@ In this manual everything what we will install goes into **c:\work** folder, so 
 	
 <a name="8"></a>
 ###8. Installing *lsqlite3* C module into systree
-  * download rock file directly from SQLite http://lua.sqlite.org/index.cgi/index version 0.9.3 and unpack it into ```c:\work\src``` folder
   * download sqlite source http://sqlite.org/2016/sqlite-amalgamation-3130000.zip and unpack it into ```c:\work\src\sqlite``` folder
   * download sqlite precompiled library http://sqlite.org/2016/sqlite-dll-win32-x86-3130000.zip and unpack it also into ```c:\work\src\sqlite``` folder
-  * open cmd window and run the following command ```luarocks install c:\work\src\lsqlite3_fsl09w\lsqlite3-0.9.3-0.rockspec SQLITE_DIR=c:\work\src\sqlite SQLITE_INCDIR=c:\work\src\sqlite SQLITE_LIBDIR=c:\work\src\sqlite```
+  * open cmd window and run the following command ```luarocks install lsqlite3 SQLITE_DIR=c:\work\src\sqlite SQLITE_INCDIR=c:\work\src\sqlite SQLITE_LIBDIR=c:\work\src\sqlite```
   * copy ```sqlite3.dll``` file from ```c:\work\src\sqlite``` folder into ```c:\work\lua\bin``` folder
   * lsqlite3 module is installed in systree
 	
