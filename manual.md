@@ -31,8 +31,8 @@ In this manual everything what we will install goes into **c:\work** folder, so 
 * [Installing **luasql-mysql** C module into systree](#7)
 * [Installing **lsqlite3** C module into systree](#8)
 * [Installing **penlight** pure Lua module](#9)
-* [](#10)
-* [](#11)
+* [Final steps](#10)
+* [Some principles as far as I understand them](#11)
 
 ---
 
@@ -99,12 +99,12 @@ In this manual everything what we will install goes into **c:\work** folder, so 
   * close all black cmd windows and run new one to reload ```PATH``` settings :)
 	
 <a name="5"></a>
-**5. Installing first Lua C module **luautf8** into systree**
+**5. Installing first Lua C module *luautf8* into systree**
   * run command ```luarocks install lua-utf8``` in cmd window ... Zzzz ...
   * ... and module is installed in systree
 	
 <a name="6"></a>
-**6. Installing **luasec** C module into systree**
+**6. Installing *luasec* C module into systree**
   * luasocket module will be installed automatically with luasec module
   * first install OpenSSL binary package from here https://slproweb.com/products/Win32OpenSSL.html to avoid compilation of sources, btw. it works with msys so if you wish you can compile it from sources
   * download full version, not *light* version, 32bit, I use this now *Win32 OpenSSL v1.0.1t*
@@ -130,7 +130,7 @@ In this manual everything what we will install goes into **c:\work** folder, so 
   * luasql-mysql module is installed in systree
 	
 <a name="8"></a>
-**8. Installing **lsqlite3** C module into systree**
+**8. Installing *lsqlite3* C module into systree**
   * download rock file directly from SQLite http://lua.sqlite.org/index.cgi/index version 0.9.3 and unpack it into ```c:\work\src``` folder
   * download sqlite source http://sqlite.org/2016/sqlite-amalgamation-3130000.zip and unpack it into ```c:\work\src\sqlite``` folder
   * download sqlite precompiled library http://sqlite.org/2016/sqlite-dll-win32-x86-3130000.zip and unpack it also into ```c:\work\src\sqlite``` folder
@@ -139,7 +139,7 @@ In this manual everything what we will install goes into **c:\work** folder, so 
   * lsqlite3 module is installed in systree
 	
 <a name="9"></a>
-**9. Installing **penlight** pure Lua module**
+**9. Installing *penlight* pure Lua module**
   * this is a bonus :) pure lua module, it is ideal resource on how to write code in lua, is well documented, full of examples
   * open cmd window and run the following command ```luarocks install penlight```
   * it is dependent on module *luafilesystem* which installs automaticaly don't worry
