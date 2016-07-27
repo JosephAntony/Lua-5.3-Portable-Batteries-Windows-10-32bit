@@ -8,7 +8,7 @@ In this humble step-by-step manual we will learn how to compile and install Lua,
 
 ---
 
-At the end of the following steps you will have standalone Lua distribution for Windows which:
+**At the end of the following steps you will have standalone Lua distribution for Windows which:**
   * runs on Windows 7, 8, 8.1, 10 ... 32/64 bit  (if you can run it on XP let me know :)
   * doesn't require from its user to install any additional libraries, runtimes, frameworks into his operating system to run correctly
   * you can distribute it to your friends, collegues or clients with your scripts as a zip archive
@@ -20,14 +20,13 @@ In this manual everything what we will install goes into **c:\work** folder, so 
 
 ---
 
-Contents:  
+**Contents:**  
 
 * [Installing MinGW32 C/C++ compiler](#1)
 * [Installing Git for Windows](#2)
 * [Compiling and installing Lua](#3)
 * [Installing Luarocks](#4)
-[](#4)
-[](#5)
+* [Installing first Lua C module *luautf8* into systree](#5)
 [](#6)
 [](#7)
 [](#8)
