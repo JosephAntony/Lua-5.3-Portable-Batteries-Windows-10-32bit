@@ -20,6 +20,8 @@ In this manual everything what we will install goes into **c:\work** folder, so 
 
 ---
 
+[bod 4](#4)
+
 
 **1. Installing MinGW32 C/C++ compiler**
   * download MinGW32 from here https://sourceforge.net/projects/mingw/files/Installer/
@@ -40,31 +42,32 @@ In this manual everything what we will install goes into **c:\work** folder, so 
   * add ```C:\work\mingw\bin``` folder to your ```PATH``` variable if it is not there
 
 **2. Installing Git for Windows**
-	- download Git installation file from here https://git-scm.com/download/win
-	- run it, click *Next*, change directory to ```c:\work\git```
-	- click *Next* 3 times
-	- check *Use Git from the Windows Command Prompt*, click *Next*
-	- check *Checkout Windows-style, ...* click *Next*
-	- check *Use Windows' default console window*, click *Next*
-	- click *Install*, drink coffee
-	- finish it
+  * download Git installation file from here https://git-scm.com/download/win
+  * run it, click *Next*, change directory to ```c:\work\git```
+  * click *Next* 3 times
+  * check *Use Git from the Windows Command Prompt*, click *Next*
+  * check *Checkout Windows-style, ...* click *Next*
+  * check *Use Windows' default console window*, click *Next*
+  * click *Install*, drink coffee
+  * finish it
 	
 **3. Compiling and installing Lua**
-	- download latest lua (5.3.3 currently) from here https://www.lua.org/ftp/lua-5.3.3.tar.gz
-	- create folder ```c:\work\src```
-	- unpack it to ```c:\work\src``` ... it is tar.gz archive you will need something like http://www.7-zip.org/download.html to unpack it
-	- now run ```msys.bat``` via desktop icon
-	- run ```cd c:/work/src/lua-5.3.3``` on the msys command line
-	- run ```make mingw``` command
-	- run ```make local install``` command, this creates folder ```c:\work\src\lua-5.3.3\install``` which contains you Lua installation
-	- from ```c:\work\src\lua-5.3.3\src``` copy file ```lua53.dll``` into ```c:\work\src\lua-5.3.3\install\bin``` folder
-	- copy whole folder ```c:\work\src\lua-5.3.3\install``` to ```c:\work``` ... rename it to ```lua```
-	- ```c:\work\lua``` now contains ```bin,include,lib,man,share``` folders.
-	- you can try to run ```c:\work\lua\bin\lua.exe``` now :)
-	- copy ```libgcc_s_dw2-1.dll``` file from ```C:\work\mingw\bin``` folder into ```c:\work\lua\bin``` folder - this is essential for standalone distribution
-	- add ```C:\work\lua\bin``` to your ```PATH``` variable if you wish and if it is not there
-	- **congrats you compiled your very own Lua from sources**
-	
+  * download latest lua (5.3.3 currently) from here https://www.lua.org/ftp/lua-5.3.3.tar.gz
+  * create folder ```c:\work\src```
+  * unpack it to ```c:\work\src``` ... it is tar.gz archive you will need something like http://www.7-zip.org/download.html to unpack it
+  * now run ```msys.bat``` via desktop icon
+  * run ```cd c:/work/src/lua-5.3.3``` on the msys command line
+  * run ```make mingw``` command
+  * run ```make local install``` command, this creates folder ```c:\work\src\lua-5.3.3\install``` which contains you Lua installation
+  * from ```c:\work\src\lua-5.3.3\src``` copy file ```lua53.dll``` into ```c:\work\src\lua-5.3.3\install\bin``` folder
+  * copy whole folder ```c:\work\src\lua-5.3.3\install``` to ```c:\work``` ... rename it to ```lua```
+  * ```c:\work\lua``` now contains ```bin,include,lib,man,share``` folders.
+  * you can try to run ```c:\work\lua\bin\lua.exe``` now :)
+  * copy ```libgcc_s_dw2-1.dll``` file from ```C:\work\mingw\bin``` folder into ```c:\work\lua\bin``` folder - this is essential for standalone distribution
+  * add ```C:\work\lua\bin``` to your ```PATH``` variable if you wish and if it is not there
+  * **congrats you compiled your very own Lua from sources**
+
+<a name="4"></a>	
 **4. Installing Luarocks**
 	- here are original install instructions https://github.com/keplerproject/luarocks/wiki/Installation-instructions-for-Windows
 	- download latest Luarocks (2.3.0) from here http://keplerproject.github.io/luarocks/releases/
