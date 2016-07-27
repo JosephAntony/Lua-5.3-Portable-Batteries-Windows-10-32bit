@@ -12,7 +12,7 @@ In this humble step-by-step manual we will learn how to compile and install Lua 
 ---
 
 For haters: 
-> Some people doesn't like the idea of creating binary distros from OSS. They identify themselves as *happy non-windows-users :)* Man I'm a Linux fan and you are not living in the real world. I started my Linux experience with RedHat Linux 5.0 Hurricane Iin 1998. I got it from my friend burned on CD. From 2006 I'm using fine tuned Arch Linux as my main OS and Windows only virtually, but many people around me use Windows as their main OS and I have to deliver my work also for this platform.
+> Some people doesn't like the idea of creating binary distros from OSS. They identify themselves as *happy non-windows-users :)* Man I'm a Linux fan and you are not living in the real world. I started my Linux experience with RedHat Linux 5.0 Hurricane in 1998. I got it from my friend burned on CD. From 2006 I'm using fine tuned Arch Linux as my main OS and Windows only virtually, but many people around me use Windows as their main OS and I have to deliver my work also for this platform.
 
 For you:
 > If you are a programmer I strongly recommend you to start using Linux ASAP. No matter which distribution you choose.
