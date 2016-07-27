@@ -4,9 +4,9 @@ Started July 26, 2016
 
 ---
 
-In this humble step-by-step manual we will learn how to compile and install Lua, Lua C modules and one pure Lua module. We will learn what to download, install and setup to achieve this.
+In this humble step-by-step manual we will learn how to compile and install Lua 5.3.3, Lua C modules and one pure Lua module. We will learn what to download, install and setup to achieve this.
 
- [**HERE**](https://github.com/is73/Lua-5.3-Portable-Batteries-Windows-10-32bit) you can download my current standalone binary distribution of Lua 5.3.3 and some fresh useful modules.
+ [**HERE**](https://github.com/is73/Lua-5.3-Portable-Batteries-Windows-10-32bit) ... you can download my current standalone binary distribution of Lua 5.3.3 and some fresh useful modules.
 
 ---
 
