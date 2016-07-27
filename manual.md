@@ -89,9 +89,9 @@ In this manual everything goes into **c:\work** folder, so please create it.
 	- luasocket module will be installed automatically with luasec module
 	- first install OpenSSL binary package from here https://slproweb.com/products/Win32OpenSSL.html to avoid compilation of sources, btw. it works with msys so if you wish you can compile it from sources
 	- download full version, not *light* version, 32bit, I use this now *Win32 OpenSSL v1.0.1t*
-	- run installer, install it anywhere (I use default ```C:\OpenSSL-Win32```), if installer asks where to copy OpenSSL DLLs choose ```The OpenSSL binaries(/bin) directory```
+	- run installer, install it into ```c:\work\src\ssl```, if the installer asks you where to copy OpenSSL DLLs choose ```The OpenSSL binaries(/bin) directory```
 	- donate author if you wish and finish installation
-	- in cmd window run the following command ```luarocks install luasec OPENSSL_DIR=c:\OpenSSL-Win32 OPENSSL_LIBDIR=c:\OpenSSL-Win32\lib OPENSSL_INCDIR=c:\OpenSSL-Win32\include```
+	- in cmd window run the following command ```luarocks install luasec OPENSSL_DIR=c:\work\src\ssl OPENSSL_LIBDIR=c:\work\src\ssl\lib OPENSSL_INCDIR=c:\work\src\ssl\include```
 	- use your path in command above, path where you installed openssl
 	- luasec and luasocket are now installed in systree
 	- for our standalone distro navigate to ```c:\OpenSSL-Win32``` folder and copy ```libeay32.dll, libssl32.dll, ssleay32.dll``` files into ```c:\work\lua\bin``` folder
