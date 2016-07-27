@@ -9,10 +9,10 @@ In this humble step-by-step manual we will learn how to compile and install Lua,
 ---
 
 At the end of the following steps you will have standalone Lua distribution for Windows which:
-	* runs on Windows 7, 8, 8.1, 10 ... 32/64 bit  (if you can run it on XP let me know :)
-	* doesn't require from its user to install any additional libraries, runtimes, frameworks into his operating system to run correctly    
-	* you can distribute it to your friends, collegues or clients with your scripts as a zip archive  
-	* you can take it with you on USB key  
+  * runs on Windows 7, 8, 8.1, 10 ... 32/64 bit  (if you can run it on XP let me know :)
+  * doesn't require from its user to install any additional libraries, runtimes, frameworks into his operating system to run correctly
+  * you can distribute it to your friends, collegues or clients with your scripts as a zip archive
+  * you can take it with you on USB key
 
 ---
 
@@ -22,22 +22,22 @@ In this manual everything what we will install goes into **c:\work** folder, so 
 
 
 **1. Installing MinGW32 C/C++ compiler**
-	* download MinGW32 from here https://sourceforge.net/projects/mingw/files/Installer/
-		* file name is ```mingw-get-setup.exe```
-	* run it, then click ```Install```
-	* change installation directory to ```c:\work\mingw```
-	* click ```Continue```
-	* at the end of the process click ```Continue``` again, new window opens where you can choose which packages to install
-	* mark the following for installation
-		* mingw-developer-toolkit
-		* mingw32-base
-		* mingw32-gcc-g++
-		* msys-base
-	* in window menu click on *Installation* -> *Apply changes*
-	* new window opens, click *Apply* and installation process starts
-	* at the end click *Close* and close also MinGW32 window.
-	* navigate to `C:\work\mingw\msys\1.0` folder and make shortcut from ```msys.bat``` file on the desktop, we will use Msys for compilation
-	* add ```C:\work\mingw\bin``` folder to your ```PATH``` variable if it is not there
+  * download MinGW32 from here https://sourceforge.net/projects/mingw/files/Installer/
+    * file name is ```mingw-get-setup.exe```
+  * run it, then click ```Install```
+  * change installation directory to ```c:\work\mingw```
+  * click ```Continue```
+  * at the end of the process click ```Continue``` again, new window opens where you can choose which packages to install
+  * mark the following for installation
+    * mingw-developer-toolkit
+    * mingw32-base
+    * mingw32-gcc-g++
+    * msys-base
+  * in window menu click on *Installation* -> *Apply changes*
+  * new window opens, click *Apply* and installation process starts
+  * at the end click *Close* and close also MinGW32 window.
+  * navigate to `C:\work\mingw\msys\1.0` folder and make shortcut from ```msys.bat``` file on the desktop, we will use Msys for compilation
+  * add ```C:\work\mingw\bin``` folder to your ```PATH``` variable if it is not there
 
 **2. Installing Git for Windows**
 	- download Git installation file from here https://git-scm.com/download/win
