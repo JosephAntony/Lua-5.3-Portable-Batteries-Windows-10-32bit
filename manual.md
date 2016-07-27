@@ -8,7 +8,9 @@ In this humble step-by-step manual we will learn how to compile and install Lua,
 
 You can download my current standalone binary distribution of Lua and some useful modules [here](https://github.com/is73/Lua-5.3-Portable-Batteries-Windows-10-32bit)
 
-For haters: Some people doesn't like the idea of creating binary packages from OSS. Man I'm a Linux fan. I started my Linux experience with RedHat Linux 5.0 burned on CD-ROM from my friend in 1998. From 2006 I'm using fine tuned Arch Linux as my main OS and Windows only virtually, but many people around me use Windows as their main OS and I have to deliver my work also for this platform. If you are a programmer I strongly recommend you to start use Linux ASAP.  
+---
+
+`For haters: Some people doesn't like the idea of creating binary packages from OSS. Man I'm a Linux fan. I started my Linux experience with RedHat Linux 5.0 burned on CD-ROM from my friend in 1998. From 2006 I'm using fine tuned Arch Linux as my main OS and Windows only virtually, but many people around me use Windows as their main OS and I have to deliver my work also for this platform. If you are a programmer I strongly recommend you to start use Linux ASAP.  `
 
 ---
 
