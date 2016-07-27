@@ -1,7 +1,6 @@
 ** DRAFT **
 
-Installing Lua 5.3.3 and C modules from sources on Windows
--------------------------------
+#Installing Lua 5.3.3 and C modules from sources on Windows
 July 26, 2016
 
 ---
