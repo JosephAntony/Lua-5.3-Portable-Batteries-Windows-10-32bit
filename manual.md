@@ -120,10 +120,9 @@ In this manual everything what we will install goes into **c:\work** folder, so 
   * run installer, install it into ```c:\work\src\ssl```, if the installer asks you where to copy OpenSSL DLLs choose ```The OpenSSL binaries(/bin) directory```
   * donate author if you wish and finish installation
   * in cmd window run the following command ```luarocks install luasec OPENSSL_DIR=c:\work\src\ssl OPENSSL_LIBDIR=c:\work\src\ssl\lib OPENSSL_INCDIR=c:\work\src\ssl\include```
-  * use your path in command above, path where you installed openssl
   * luasec and luasocket are now installed in systree
-  * for our standalone distro navigate to ```c:\OpenSSL-Win32``` folder and copy ```libeay32.dll, libssl32.dll, ssleay32.dll``` files into ```c:\work\lua\bin``` folder
-  * also copy ```msvcr120.dll``` file from ```c:\OpenSSL-Win32\bin``` folder into ```c:\work\lua\bin``` folder
+  * for our standalone distro navigate to ```c:\work\src\ssl``` folder and copy ```libeay32.dll, libssl32.dll, ssleay32.dll``` files into ```c:\work\lua\bin``` folder
+  * also copy ```msvcr120.dll``` file from ```c:\work\src\ssl\bin``` folder into ```c:\work\lua\bin``` folder
 	
 <a name="7"></a>
 ###7. Installing *luasql-mysql* C module into systree
