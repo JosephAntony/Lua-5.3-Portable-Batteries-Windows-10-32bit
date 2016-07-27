@@ -1,6 +1,6 @@
 ** DRAFT **
 #Installing Lua 5.3.3 and C modules from sources on Windows
-July 26, 2016
+Started July 26, 2016
 
 ---
 
@@ -8,7 +8,7 @@ In this humble step-by-step manual we will learn how to compile and install Lua,
 
 ---
 
-###At the end of the following steps you will have standalone Lua distribution for Windows which:
+###At the end you will have standalone Lua distribution for Windows which:
   * runs on Windows 7, 8, 8.1, 10 ... 32/64 bit  (if you can run it on XP let me know :)
   * doesn't require from its user to install any additional libraries, runtimes, frameworks into his operating system to run correctly
   * you can distribute it to your friends, collegues or clients with your scripts as a zip archive
