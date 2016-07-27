@@ -144,9 +144,11 @@ In this manual everything what we will install goes into **c:\work** folder, so 
   * open cmd window and run the following command ```luarocks install penlight```
   * it is dependent on module *luafilesystem* which installs automaticaly don't worry
   * penlight module is installed in systree
-	
+
+---
+
 <a name="10"></a>
-###10. Final steps
+###Final steps
   * copy Lua binary modules from ```C:\work\luarocks\systree\lib\lua\5.3``` folder into ```C:\work\lua\lib\lua\5.3``` folder
   * copy Lua modules from ```C:\work\luarocks\systree\share\lua\5.3``` folder into ```C:\work\lua\share\lua\5.3``` folder
   * for your standalone distribution don't forget repeat previous two steps everytime you install/remove module into/from Luarocks systree .. make a batch file to automate it :)
@@ -157,6 +159,7 @@ In this manual everything what we will install goes into **c:\work** folder, so 
   * ... and enjoy the Lua programming :)
 	
 ---
+
 <a name="11"></a>
 ###Some principles as far as I understand them
   * if module is written in pure Lua it goes to your LUA_PATH, in our case into ```C:\work\lua\share\lua\5.3``` folder
