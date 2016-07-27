@@ -1,3 +1,5 @@
+Your [feedback](https://github.com/is73/Lua-5.3-Portable-Batteries-Windows-10-32bit/issues) is highly appreciated
+
 #How to compile and install Lua 5.3.3 and C modules from sources on Windows
 Started July 26, 2016
 
